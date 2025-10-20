@@ -1,0 +1,45 @@
+*~
+*#
+*.swp
+
+*.DS_Store
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+
+/.coverage
+/.coverage.*
+/.cache
+/.pytest_cache
+/.mypy_cache
+
+# Build and output directories
+/build
+/dist
+
+# Log files
+*.log
+logs/
+
+# CDP Runbooker debug reports
+cdp-runbooker-debug-*.md
+
+# Temporary documentation (use DEVELOPMENT.md Change History instead)
+*_FIXES.md
+*_UPDATE_SUMMARY.md
+*_SUMMARY.md
+
+# Configuration files with sensitive data
+Config.*
+!Config.example
+
+# IDE files
+.vscode/
+.idea/
+.kiro/
+
+# Virtual Environments
+venv/
+.venv/

@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cdp-runbooker"
+version = "2.0.0"
+description = "CDP Engagement Folder and Runbook Creator with secure token management"
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [
+    {name = "Nick Fielding", email = "fieldinn@amazon.com"},
+]
+keywords = ["cdp", "runbook", "quip", "automation", "engagement", "aws"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Information Technology",
+    "Topic :: Office/Business :: Office Suites",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "quipclient>=0.1.0",
+    "requests>=2.25.0",
+    "urllib3>=1.26.0,<2.0",
+    "cryptography>=3.0.0",
+    "certifi>=2020.6.20",
+]
+
+[project.urls]
+Homepage = "https://code.amazon.com/packages/CDP-Quip-Runbooker"
+Repository = "https://code.amazon.com/packages/CDP-Quip-Runbooker"
+
+[project.scripts]
+cdpRunbooker = "cdpRunbooker:main"
+
+[tool.setuptools]
+py-modules = ["cdpRunbooker"]
+packages = ["core", "utils"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"*" = ["*.md", "*.txt"]
+core = ["*.py"]
+utils = ["*.py"]
